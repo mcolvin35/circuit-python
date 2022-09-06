@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Upload code to board",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "Copy-Item -Path \"${workspaceFolder}\\*\" -Exclude .* -Destination \"D:\\\" -Recurse -Force",
+            "showTerminal": false,
+            "terminalName": "Code Uploader"
+        }
+    ]
+}
