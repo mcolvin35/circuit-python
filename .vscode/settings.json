@@ -6,10 +6,10 @@
     },
     "circuitpython.board.version": null,
     "circuitpython.board.vid": "0x239A",
-    "circuitpython.board.pid": "0x8014",
+    "circuitpython.board.pid": "0x8038",
     "python.analysis.extraPaths": [
-        "c:\\Users\\mcolvin35\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.19-win32-x64\\boards\\0x239A\\0x8014",
+        "c:\\Users\\mcolvin35\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.19-win32-x64\\boards\\0x239A\\0x8038",
         "c:\\Users\\mcolvin35\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.19-win32-x64\\stubs",
-        "c:\\Users\\mcolvin35\\AppData\\Roaming\\Code\\User\\globalStorage\\joedevivo.vscode-circuitpython\\bundle\\20220905\\adafruit-circuitpython-bundle-py-20220905\\lib"
+        "c:\\Users\\mcolvin35\\AppData\\Roaming\\Code\\User\\globalStorage\\joedevivo.vscode-circuitpython\\bundle\\20220920\\adafruit-circuitpython-bundle-py-20220920\\lib"
     ]
 }

@@ -1,0 +1,33 @@
+
+import time
+import board
+import adafruit_hcsr04
+import simpleio 
+import neopixel
+
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+dot.brightness = 0.5 
+
+while True:
+    try:
+        cm=sonar.distance
+
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.1)
+
+    print((cm,))
+    if cm<5:
+        dot.fill((255, 0, 0))
+    if cm>=5 and cm<20:
+        blue=simpleio.map_range(cm, 5, 20, 0, 255)
+        red=255-cm
+        green=cm
+        dot.fill((red, green, blue))
+    if cm>=20 and cm<35:
+        red=cm
+        green=simpleio.map_range(cm, 20, 35, 0, 255)
+        blue=255-cm
+    if cm>35:
+        dot.fill((0, 255, 0))

@@ -6,7 +6,7 @@
 import board
 import pwmio
 from adafruit_motor import servo
-
+from digitalio import DigitalInOut, Direction, Pull
 
 # create a PWMOut object on Pin A2.
 pwm = pwmio.PWMOut(board.D9, duty_cycle=2 ** 15, frequency= 100)
