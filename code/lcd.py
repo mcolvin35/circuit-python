@@ -14,7 +14,7 @@ lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
 toggle=sw.value #toggle variable is switch value 
 val=0
 
-prev_state = btn.value #debouncing 
+prev_state = btn.value #debouncing
 prev_state2=sw.value
 lcd.set_cursor_pos (1, 0) #sets cursor to given coordinates on lcd screen
 lcd.print("NUMBA:") #print "NUMBA:" on lcd screen
