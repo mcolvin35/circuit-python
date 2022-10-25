@@ -1,3 +1,26 @@
-# CPyProjectTemplate
-Put a description for your project here!
-This repo is a template VS code project for CircuitPython projects that automatically uploads your code to the board when you press F5. Requires F5Anything extension.
+# Engineering Notebook
+
+
+## Hello Circuitpython!
+### Description
+### Evidence
+#### Image
+#### Reflection
+
+## Servo
+### Description
+### Evidence
+### Image
+### Reflection
+
+## Ultrasonic Sensor 
+### Description
+### Evidence
+### Image
+### Reflection
+
+## LCD
+### Description
+### Evidence
+### Image
+### Reflection

@@ -4,14 +4,14 @@ from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 from digitalio import DigitalInOut, Direction, Pull
 
 i2c = board.I2C()
-btn=DigitalInOut(board.D12)
-sw=DigitalInOut(board.D13)
+btn=DigitalInOut(board.D12) #links btn to board
+sw=DigitalInOut(board.D13) #links switch to board 
 sw.direction=Direction.INPUT
-btn.direction=Direction.INPUT
+btn.direction=Direction.INPUT #btn and switch are inputs 
 btn.pull=Pull.DOWN
 
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
-toggle=sw.value
+toggle=sw.value #toggle variable is switch value 
 val=0
 
 prev_state = btn.value
