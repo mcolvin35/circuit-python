@@ -22,8 +22,11 @@ print("Make it pink!") #prints "Make it pink!" to the serial monitor
 while True:
     dot.fill((255, 50, 85)) #makes the led pink
 ```
-
 ### **Image**
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/hello_circuitpy.png?raw=true" width="500">
+
+No wiring necessary for this one, **Metroexpress** boards have an LED built in :)
+
 ### **Reflection**
 Getting everything set up was overwhelming and complicated, but Mr. H, River, and Josie were super helpful in getting things working. Thanks!
 
@@ -73,7 +76,11 @@ while True:
 
     prev_state2 = cur_state2
 ```
-### **Image**
+### **Image** 
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/servo.png?raw=true" width="500">
+
+Forgot to make a gif of this one :(
+
 ### **Reflection**
 For this assignment I finally learned how button debouncing actually works, it checks for the actual change in value rather than when the value is 1 or 0 so that you don't get repeat detections!
 
