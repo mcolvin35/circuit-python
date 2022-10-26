@@ -119,6 +119,8 @@ while True:
         dot.fill((0, 255, 0)) #led is full green
 ```
 ### **Image**
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/ultrasonic_led.gif?raw=true" width="500">
+
 ### **Reflection**
 This assignment was really fun for me and it felt like I really got into a flow with understanding and being able to explain my code well enough for others to learn from me. [This spreadsheet was also super helpful for figuring out how to do the math!](https://docs.google.com/spreadsheets/d/e/2PACX-1vRzoIejkQqugrDoWHBw14qTI0HifXba92WiyQ24whEnzWcCUaCDYu6ifMQKK5O5Ilkxrd7UKIxPLBCW/pubhtml)
 
@@ -192,5 +194,7 @@ while True:
         prev_state=cur_state
 ```
 ### **Image**
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/lcd.gif?raw=true" width="500">
+
 ### **Reflection**
 It was pretty tricky figuring out how to get the LCD to print a variable, but I eventually got it with some help. Getting the LCD connected to the board was also pretty tough. 
