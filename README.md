@@ -4,7 +4,7 @@
 * [Servo](#Servo)
 * [Ultrasonic Sensor](#ultrasonic-sensor)
 * [LCD](#lcd)
-
+* [Motor Control](#motor-control)
 
 ## ***Hello Circuitpython!***
 ### **Description**
@@ -205,3 +205,24 @@ while True:
 
 ### **Reflection**
 It was pretty tricky figuring out how to get the LCD to print a variable, but I eventually got it with some help. Getting the LCD connected to the board was also pretty tough. 
+
+## ***Motor Control***
+### **Description**
+Control a **DC motor** with a **potentiometer**
+### **Evidence**
+```python
+import board 
+from analogio import AnalogIn, AnalogOut
+
+mot=AnalogOut(board.A1) #sets motor as output and links it to A1
+pot=AnalogIn(board.A0) #sets potentiometer as input and links it to A0 (true analog)
+
+while True:
+    print(pot.value) #prints potentiometer value to the serial monitor                                                                                                                                                                                                       
+    mot.value=(pot.value) #sets the speed of the motor to the value of the potentiometer
+```
+### **Image**
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/motor.gif?raw=true" width="500">
+
+### **Reflection**
+For this assignment I learned that the A0 pin on the Metroexpress boards can do true analog, which goes from 0-65535!
