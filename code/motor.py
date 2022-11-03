@@ -1,9 +1,9 @@
 import board 
-import pwmio
 from analogio import AnalogIn, AnalogOut
-from digitalio import DigitalInOut, Direction
 
-motor=AnalogOut(board.A0) 
+mot=AnalogOut(board.A1) #sets motor as output and links it to A1
+pot=AnalogIn(board.A0) #sets potentiometer as input and links it to A0 (true analog)
 
 while True:
-    motor.value=0
+    print(pot.value) #prints potentiometer value to the serial monitor                                                                                                                                                                                                       
+    mot.value=(pot.value) #sets the speed of the motor to the value of the potentiometer
