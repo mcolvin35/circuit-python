@@ -1,9 +1,13 @@
 import board
 import analogio
 import time
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
 
 TMP36_PIN = board.A0  # Analog input connected to TMP36 output.
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
 
 
 # Function to simplify the math of reading the temperature.
@@ -24,3 +28,13 @@ while True:
     # Print out the value and delay a second before looping again.
     print("Temperature: {}C {}F".format(temp_C, temp_F))
     time.sleep(1.0)
+
+    if temp_F > 78:
+        lcd.clear()
+        lcd.set_cursor_pos (1, 0)
+        lcd.print("Too hot!")
+
+    if temp_F < 70:
+        lcd.clear()
+        lcd.set_cursor_pos (1, 0)
+        lcd.print("Too cold!")
