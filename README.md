@@ -296,3 +296,7 @@ For this assignment, the goal was to make a photointerruptor count the amount of
 
 ## ***Onshape Certification Reflection***
 I'm Onshape certified! The CAD part of the test went pretty well, I got every question right except for one which I think was a measurement error. I didn't do well on the general knowledge section but I still passed since I did well on the CAD. 
+
+<img src="https://github.com/mcolvin35/circuit-python/blob/master/images/onshapecert.png?raw=true" width="1000">
+
+[Here's the link to my certificate!](https://ti-user-certificates.s3.amazonaws.com/6e557ed6-d03d-4c48-9492-4d18d145d7a1/abe150c2-54ab-47a3-83fd-264863f76f45-matthew-colvin-8364ecf7-1b55-4d76-ba3b-b5ed202e0dda-certificate.pdf)
