@@ -1,11 +1,18 @@
-# **Engineering Notebook Code**
+# **ENGINEERING NOTEBOOK**
 ## ***Table of Contents***
+### *Quarter 1*
 * [Hello Circuitpython](#Hello-Circuitpython!)
 * [Servo](#Servo)
 * [Ultrasonic Sensor](#ultrasonic-sensor)
 * [LCD](#lcd)
 * [Motor Control](#motor-control)
+### *Quarter 3*
+* [Temperature Sensor](#temperature-sensor)
+* [Rotary Encoder](#rotary-encoder)
+* [Photointerruptor](#photointerruptor)
+* [Onshape Certification Reflection](#onshape-certification-reflection)
 
+# **Quarter 1**
 ## ***Hello Circuitpython!***
 ### **Description**
 Get **Circuitpython** and the **Metroexpress** boards up and running, make the onboard neopixel LED **glow**
@@ -226,3 +233,66 @@ while True:
 
 ### **Reflection**
 For this assignment I learned that the A0 pin on the Metroexpress boards can do true analog, which goes from 0-65535!
+
+# **Quarter 3**
+## ***Temperature Sensor***
+### **Description**
+For this assignment, the goal was to make a temperature sensor display the current temperature on an LCD screen.
+### **Evidence**
+```python 
+import board
+import analogio
+import time
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+
+
+TMP36_PIN = board.A0  # Analog input connected to TMP36 output.
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
+
+
+# Function to simplify the math of reading the temperature.
+def tmp36_temperature_C(analogin):
+    millivolts = analogin.value * (analogin.reference_voltage * 1000 / 65535)
+    return (millivolts - 500) / 10
+
+
+# Create TMP36 analog input.
+tmp36 = analogio.AnalogIn(TMP36_PIN)
+
+# Loop forever.
+while True:
+    # Read the temperature in Celsius.
+    temp_C = tmp36_temperature_C(tmp36)
+    # Convert to Fahrenheit.
+    temp_F = (temp_C * 9/5) + 32
+    # Print out the value and delay a second before looping again.
+    print("Temperature: {}C {}F".format(temp_C, temp_F))
+    time.sleep(1.0)
+
+    if temp_F > 78:
+        lcd.clear()
+        lcd.set_cursor_pos (1, 0)
+        lcd.print("Too hot!")
+
+    if temp_F < 70:
+        lcd.clear()
+        lcd.set_cursor_pos (1, 0)
+        lcd.print("Too cold!")
+```
+### **Image**
+### **Refection**
+Sadly, I ended up never finishing this assignment or any of the other code assignments during the 3rd quarter because I was 
+focusing on finishing my robot arm project. 
+
+## ***Rotary Encoder***
+### **Description**
+For this assignment, the goal was to create a traffic light that was controlled y a menu with a rotary encoder as a input. 
+
+## ***Photointerruptor***
+### **Description**
+For this assignment, the goal was to make a photointerruptor count the amount of times it has been interrupted. 
+
+## ***Onshape Certification Reflection***
+I'm Onshape certified! The CAD part of the test went pretty well, I got every question right except for one which I think was a measurement error. I didn't do well on the general knowledge section but I still passed since I did well on the CAD. 
